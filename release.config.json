@@ -1,0 +1,9 @@
+{
+  "repository": "PlayBoardgameTogether/playboard-game-catan",
+  "assets": [
+    {
+      "id": "online.catan",
+      "archive": "catan"
+    }
+  ]
+}

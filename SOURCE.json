@@ -1,0 +1,43 @@
+{
+  "repository": "PlayBoardgameTogether/PlayBoardgameTogether",
+  "commit": "a7e36d32e2febeb5bd7013752f099d01d0502316",
+  "game": "catan",
+  "platformVersion": "0.17.0",
+  "sdkVersion": "0.1.0",
+  "ownedFiles": [
+    "game-packages/catan/README.md",
+    "game-packages/catan/art/cover-prompt.md",
+    "game-packages/catan/art/cover.png",
+    "game-packages/catan/art/cover.svg",
+    "game-packages/catan/client.html",
+    "game-packages/catan/game.json",
+    "game-packages/catan/server.txt",
+    "game-packages/catan/shared.txt",
+    "scripts/package-catan.mjs",
+    "scripts/catan-package.mjs",
+    "tests/unit/catan-package.test.ts",
+    "docs/games/catan.md"
+  ],
+  "files": {
+    "game-packages/catan/README.md": "29d72eed0db096547eceedf76cb59354197ed3d5dc6363390d2824a5db8e96d3",
+    "game-packages/catan/art/cover-prompt.md": "da7a99ecddda396dc4db5ce06ccbcbed319adb69cf25f6e27af9c1f9bd9843c0",
+    "game-packages/catan/art/cover.png": "d0ba82e07da6f542d3d6caa536f95a0e953657e28ebded39b22b758355621516",
+    "game-packages/catan/art/cover.svg": "8c4132b515a360584118a4bda534b73e508f8a29833b645a85ad102c3b3f5a9d",
+    "game-packages/catan/client.html": "d01fd9fb12cc4636b4e49212165eff61efefb8e42bc9725a5381a7cc20a91099",
+    "game-packages/catan/game.json": "37eb39e10d3542fd5cc3599b16cdf07d3143050689ab46e77f78277b01f12d66",
+    "game-packages/catan/server.txt": "350c115d14de959c4312fd604dca5864f5bbb47224e5a6dd50fc4706257ea34c",
+    "game-packages/catan/shared.txt": "22f1948cc27e644ead60c1e1f7f911a66ebd1dce989db9d8b48a5c7ac637bbe2",
+    "scripts/package-catan.mjs": "d4d81cdcac539bca1b64fea42e1a8f74822117cf3e49852dc9fc17eaf9434d08",
+    "scripts/catan-package.mjs": "f9b2532528794fddd7059d5ef0ce4d5a11735a365d71d7e5c79bc234ca1a56fd",
+    "tests/unit/catan-package.test.ts": "c8f2fd4d3e5e95597a6d427af5d13cbf13cec583e4e5c9a06a008a32c2075668",
+    "docs/games/catan.md": "5f31e34cb5a59c121c8875191b8d50ffa5da52eaeea3aaf070a8ead541c1f9f2",
+    "packages/game-sdk/src/index.ts": "7cac28f2e18b64a995d2980e1d57c4d877387ef1231a83e9f7b877197140a8c3",
+    "apps/api/src/registry/package-runtime.ts": "c92504b1a982e28198d68cf3b598b7cce5f88e7440f2257a7001cb2e919e77c1",
+    "apps/api/src/catalog/game-package.ts": "bf310e4dd4958afe06b91cf14ece1d09a4bfc2859731a983d96687fa02b9a00c",
+    "apps/api/src/catalog/package-art.ts": "b4af59861833180cac85ad873b20c55969a51c475b6413cbba4770ac7bd7dd40",
+    "apps/api/src/errors.ts": "afa3d78ef9c2652db7a91f5644dc00d11684f17b67c48dfcbca4fceb459cddd1"
+  },
+  "adaptations": [
+    "apps/api/src/errors.ts: type-only ErrorCode import points to an extracted platform error-code snapshot"
+  ]
+}
