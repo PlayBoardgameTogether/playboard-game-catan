@@ -25,8 +25,11 @@ try {
     await page.close();
   }
 } finally { await browser.close(); }
+const avatar = await readFile(new URL('../game-packages/catan/art/icon.png', import.meta.url));
+if (avatar.length > 320 * 1024) throw new Error('Avatar exceeds artwork limit');
+descriptor.presentation.icon = 'data:image/png;base64,' + avatar.toString('base64');
 files['game.json'] = Buffer.from(JSON.stringify(descriptor));
-const output = new URL('../dist/game-packages/catan-1.0.1.zip', import.meta.url);
+const output = new URL('../dist/game-packages/catan-1.0.2.zip', import.meta.url);
 await mkdir(new URL('.', output), { recursive: true });
 const bytes = zipSync(files, { mtime: new Date('2026-10-04T00:00:00Z'), level: 9 });
 await writeFile(output, bytes);

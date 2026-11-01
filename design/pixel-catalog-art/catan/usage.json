@@ -1,0 +1,13 @@
+{
+  "role": "game-avatar",
+  "source": "icon-source.png",
+  "sourceSha256": "f68bf4a10e77b103bf4a9f12fdd661d04a3f388cdc193ae274f7d717a52d2a40",
+  "userSelected": true,
+  "export": "game-packages/catan/art/icon.png",
+  "size": [
+    512,
+    512
+  ],
+  "fit": "contain",
+  "backgroundUsage": false
+}
