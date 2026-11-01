@@ -475,6 +475,9 @@ dialog .actions {
   .number-text { font-size: .36px; }
   .label { font-size: .25px; }
 }
+#players .player, #players span, #status { min-width: 0; overflow-wrap: anywhere; }
+.topline > div:first-child { min-width: 0; flex: 1; }
+.topline > button { flex-shrink: 0; }
 </style>
 </head>
 <body><main>
@@ -486,6 +489,12 @@ dialog .actions {
 <dialog id="rules"><h2>探索、交易、建设</h2><p>在自己的回合达到 10 分获胜。聚落 1 分、城市 2 分；最长道路（至少 5 条）与最大骑士军（至少 3 名）各 2 分；秘密胜利点牌计入本人分数。</p><p>开局按顺序放聚落和道路，再逆序各放一次；第二座聚落获得相邻地块资源。聚落之间至少隔一条道路。自己的道路可延伸，不能穿过对手建筑；道路最多 15 条，聚落 5 座、城市 4 座。</p><p>掷骰后相应地块生产资源：聚落 1 张，城市 2 张。强盗所在地块不生产。掷出 7 后，超过 7 张资源的玩家弃一半（向下取整），当前玩家移强盗并随机偷取相邻对手的一张资源。</p><p>道路：木材＋砖块；聚落：木材＋砖块＋羊毛＋粮食；城市：2 粮食＋3 矿石；发展卡：羊毛＋粮食＋矿石。建设和交易可以交替。</p><p>银行 4:1，通用港 3:1，专用港对应资源 2:1。玩家交易只能与当前回合玩家进行，双方必须各提供资源，不能赠送或交换同类资源。向指定玩家发出报价，对方可接受、拒绝或还价，发起人或当前玩家可取消。</p><p>每回合最多使用一张非胜利点发展卡，新购牌本回合不能使用。骑士移强盗；修路免费建两条；丰收取两张银行资源；垄断拿取其他人全部指定资源。胜利点立即计分且获胜前对手不可见。骑士也可在掷骰前使用。</p><p>最长道路不重复计算同一边，分叉取最长路线，对手建筑截断道路；平局由原持有者保留，无原持有者则暂不授予。最大骑士军同样要求超过持有者才转移。</p><div class="actions"><button id="rules-close">回到棋桌</button></div></dialog>
 <script>
 /* CATAN_SHARED */
+let playerNames = {};
+function playerName(seatId, ownSeatId, fallback) {
+  const raw = Object.hasOwn(playerNames, seatId) ? playerNames[seatId] : undefined;
+  const name = typeof raw === 'string' ? raw.trim() : '';
+  return name ? name + (seatId === ownSeatId ? '（你）' : '') : fallback;
+}
 let view = null, busy = false, pending = null, mode = null, dialogAction = null, stamp = '';
 const camera = { x: 0, y: 0, zoom: 1 };
 let pan = null, moved = false;
@@ -495,7 +504,7 @@ const TERRAIN = ['#598d65', '#bd7755', '#a7b979', '#d7b96b', '#879795'];
 const TERRAIN_LABEL = ['森林', '丘陵', '牧场', '麦田', '山地'];
 const ACTION_NAMES = { roll: '掷骰', end: '结束回合', buy: '购买发展卡', knight: '使用骑士', road_card: '使用修路', plenty: '使用丰收', monopoly: '使用垄断', accept: '接受交易', reject: '拒绝', cancel: '取消交易', finish_roads: '完成修路', claim: '宣布获胜', settlement: '聚落', city: '城市', road: '道路', bank: '银行交易', robber: '移动强盗', steal: '偷取资源', discard: '确认弃牌' };
 const PHASE_NAMES = { setup_settlement: '放置起始聚落', setup_road: '放置起始道路', roll: '掷骰生产', main: '交易与建设', discard: '弃掉一半资源', robber: '移动强盗', steal: '选择偷取对象', trade: '回应交易', free_roads: '免费修路', finished: '对局结束' };
-function player(p) { return p === view.you ? '你' : '玩家 ' + (p + 1); }
+function player(p) { return playerName(view.seats[p], view.seats[view.you], p === view.you ? '你' : '玩家 ' + (p + 1)); }
 function el(tag, text, className) { const e = document.createElement(tag); if (text !== undefined)
     e.textContent = text; if (className)
     e.className = className; return e; }
@@ -837,7 +846,8 @@ function onView(event) {
         closePanel();
         stamp = nextStamp;
     }
-    view = next;
+    playerNames = event.data.playerNames && typeof event.data.playerNames === 'object' ? event.data.playerNames : {};
+  view = next;
     busy = Boolean(event.data.busy);
     render();
 }
