@@ -1,0 +1,29 @@
+{
+  "version": "1.1.0",
+  "kind": "presentation-art",
+  "game": "catan",
+  "ruleVersionUnchanged": true,
+  "assets": [
+    {
+      "role": "icon",
+      "file": "icon.png",
+      "sha256": "95e53a9a2a2cf960869f9c8dc37db9af6e8f7254c5b9801f8e080f9b9c0ddb89",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "role": "cover",
+      "file": "cover.png",
+      "sha256": "aead3090905d288be1f4a2bd2dbd6707f88838ee710104d066516cd39275a32c",
+      "width": 960,
+      "height": 600
+    },
+    {
+      "role": "background",
+      "file": "background.png",
+      "sha256": "3266888e3f3f91112f812b959ed1ccb8c482fa8ce13b17ed75147e76ed77bab7",
+      "width": 1280,
+      "height": 720
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "version": "1.1.0",
+  "kind": "presentation-art",
+  "generator": "built-in image_gen",
+  "license": "GPL-3.0-only",
+  "rulesChanged": false,
+  "assets": [
+    {
+      "game": "catan",
+      "role": "icon",
+      "prompt": "Use case: stylized-concept. NEW original artwork for a premium PlayBoard board game platform. Sophisticated richly detailed fine PIXEL ART, visible tiny square pixel clusters, tactile physical board game pieces, refined material textures, soft daylight, restrained highlights and natural shadows, mature inviting mood, clear readable silhouette. Coordinated natural wood and dark navy with theme-specific colors. No UI, no paragraphs, no title, no brand logo, no watermark, no border. Avoid generic flat vector, blurry painterly style, glossy casino, low detail cartoon. Asset: square 1024x1024 game avatar. Close-up central iconic arrangement of the main game objects, all important edges visible, 8% breathing room, instantly recognizable even at 64px. Subject: a detailed hexagonal island board game with forest, wheat fields, green pasture, brick hills and gray mountain hex terrain, small red and blue wooden settlements and roads, two wooden dice, original illustration.",
+      "original": "design/play-art-1.1.0/catan/icon-original.png",
+      "source": "game-packages/catan/art/play-1.1.0/icon.png",
+      "originalSha256": "26f69bafe403885160268f16ceafd10cb9e2bea7e3402b853b1576eb22e4805b",
+      "sourceSha256": "95e53a9a2a2cf960869f9c8dc37db9af6e8f7254c5b9801f8e080f9b9c0ddb89",
+      "webp": "catan-icon.webp",
+      "webpSha256": "3584a015a023ee0b300cc643ac95fa86da378c68f6f7d514c0d13d5f102f59b0",
+      "width": 512,
+      "height": 512,
+      "bytes": 126820
+    },
+    {
+      "game": "catan",
+      "role": "cover",
+      "prompt": "Use case: stylized-concept. NEW original artwork for a premium PlayBoard board game platform. Sophisticated richly detailed fine PIXEL ART, visible tiny square pixel clusters, tactile physical board game pieces, refined material textures, soft daylight, restrained highlights and natural shadows, mature inviting mood, clear readable silhouette. Coordinated natural wood and dark navy with theme-specific colors. No UI, no paragraphs, no title, no brand logo, no watermark, no border. Avoid generic flat vector, blurry painterly style, glossy casino, low detail cartoon. Asset: landscape 16:10 game cover illustration. Compelling low three-quarter close view across the playable board and pieces, a small scene that makes the viewer want to sit down and play, strong foreground focal point, room to crop safely. Subject: a detailed hexagonal island board game with forest, wheat fields, green pasture, brick hills and gray mountain hex terrain, small red and blue wooden settlements and roads, two wooden dice, original illustration.",
+      "original": "design/play-art-1.1.0/catan/cover-original.png",
+      "source": "game-packages/catan/art/play-1.1.0/cover.png",
+      "originalSha256": "459a08a0d5a5a12098cd862f7051856b24d47b2f80814c99c936943ffca3c66d",
+      "sourceSha256": "aead3090905d288be1f4a2bd2dbd6707f88838ee710104d066516cd39275a32c",
+      "webp": "catan-cover.webp",
+      "webpSha256": "bd5dcc0ebf04417bc576954a96454d7c8ffb24fabbc291a5b96a7c0b0fbc52e3",
+      "width": 960,
+      "height": 600,
+      "bytes": 281364
+    },
+    {
+      "game": "catan",
+      "role": "background",
+      "prompt": "Use case: stylized-concept. NEW original artwork for a premium PlayBoard board game platform. Sophisticated richly detailed fine PIXEL ART, visible tiny square pixel clusters, tactile physical board game pieces, refined material textures, soft daylight, restrained highlights and natural shadows, mature inviting mood, clear readable silhouette. Coordinated natural wood and dark navy with theme-specific colors. No UI, no paragraphs, no title, no brand logo, no watermark, no border. Avoid generic flat vector, blurry painterly style, glossy casino, low detail cartoon. Asset: wide 16:9 immersive background original art. Rich thematic environment extending around a softly lit tabletop in the foreground, detailed atmosphere at the edges, calm low contrast central area suitable behind game UI, no embedded interface. Subject: a detailed hexagonal island board game with forest, wheat fields, green pasture, brick hills and gray mountain hex terrain, small red and blue wooden settlements and roads, two wooden dice, original illustration.",
+      "original": "design/play-art-1.1.0/catan/background-original.png",
+      "source": "game-packages/catan/art/play-1.1.0/background.png",
+      "originalSha256": "9650745c047f9e2eae3a7666ba1f1f44331683c86c3c2b1cb56accf7473954ed",
+      "sourceSha256": "3266888e3f3f91112f812b959ed1ccb8c482fa8ce13b17ed75147e76ed77bab7",
+      "webp": "catan-background.webp",
+      "webpSha256": "d3a24b2524f519f54fea6c09155e22583537fdf8200504f07745dc0b3540a336",
+      "width": 1280,
+      "height": 720,
+      "bytes": 397480
+    }
+  ]
+}
